@@ -235,7 +235,7 @@ class RuleEngine( object ):
 			elif op == 'and':
 				return self._and( *[ self._parse_rule( x ) for x in rules ] )
 			elif op == 'many':
-				return self._many( self._parse_rule( rules ) )
+				return self._many( self._parse_rule( rules[0] ) )
 
 
 	def add_t( self, key, *args ):
